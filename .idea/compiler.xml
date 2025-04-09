@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Bullet" />
+        <module name="Player" />
+        <module name="Background" />
+        <module name="Asteroids" />
+        <module name="Collision" />
+        <module name="CommonAsteroids" />
+        <module name="CommonBackground" />
+        <module name="CommonBullet" />
+        <module name="Common" />
+        <module name="Core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="astroids-components (1)" target="9" />
+      <module name="CommonBackbround" target="9" />
+      <module name="new-module" target="9" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Asteroids" options="-parameters" />
+      <module name="Background" options="-parameters" />
+      <module name="Bullet" options="-parameters" />
+      <module name="Collision" options="-parameters" />
+      <module name="Common" options="-parameters" />
+      <module name="CommonAsteroids" options="-parameters" />
+      <module name="CommonBackground" options="-parameters" />
+      <module name="CommonBullet" options="-parameters" />
+      <module name="Core" options="-parameters" />
+      <module name="Player" options="-parameters" />
+      <module name="astroids-components" options="-parameters" />
+    </option>
+  </component>
+</project>
