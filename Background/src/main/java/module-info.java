@@ -5,5 +5,6 @@ module Background {
      requires Common;
      requires CommonBackground;
      requires javafx.graphics;
+     requires javafx.swing;
      provides BackgroundSPI with BackgroundPlugin;
 }

@@ -21,8 +21,9 @@ public class AsteroidPlugin implements IGamePluginService {
 
     @Override
     public void stop(GameData gameData, World world) {
-        // Remove entities
+        System.out.println("AsteroidPlugin stop");
         for (Entity asteroid : world.getEntities(Asteroid.class)) {
+            (new AsteroidSplitterImpl()).createSplitAsteroid(asteroid, world);
             world.removeEntity(asteroid);
         }
     }
@@ -32,8 +33,8 @@ public class AsteroidPlugin implements IGamePluginService {
         Random rnd = new Random();
         int size = rnd.nextInt(10) + 5;
         asteroid.setPolygonCoordinates(size, -size, -size, -size, -size, size, size, size);
-        asteroid.setX(0);
-        asteroid.setY(0);
+        asteroid.setX(rnd.nextFloat() * gameData.getDisplayWidth());
+        asteroid.setY(rnd.nextFloat() * gameData.getDisplayHeight());
         asteroid.setRadius(size);
         asteroid.setRotation(rnd.nextInt(90));
         asteroid.setLifeAmount(rnd.nextInt(4));
