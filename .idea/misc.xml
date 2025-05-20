@@ -12,6 +12,9 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/CommonBackbround/pom.xml" />
+        <option value="$PROJECT_DIR$/CommonPointSystem/pom.xml" />
+        <option value="$PROJECT_DIR$/Enemy/pom.xml" />
+        <option value="$PROJECT_DIR$/dk.benand.cbse.score/pom.xml" />
         <option value="$PROJECT_DIR$/new-module/pom.xml" />
       </set>
     </option>

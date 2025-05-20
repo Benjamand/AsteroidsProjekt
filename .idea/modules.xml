@@ -10,7 +10,9 @@
       <module fileurl="file://$PROJECT_DIR$/CommonAsteroids/CommonAsteroids.iml" filepath="$PROJECT_DIR$/CommonAsteroids/CommonAsteroids.iml" />
       <module fileurl="file://$PROJECT_DIR$/CommonBackground/CommonBackground.iml" filepath="$PROJECT_DIR$/CommonBackground/CommonBackground.iml" />
       <module fileurl="file://$PROJECT_DIR$/CommonBullet/CommonBullet.iml" filepath="$PROJECT_DIR$/CommonBullet/CommonBullet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Opponent/Opponent.iml" filepath="$PROJECT_DIR$/Opponent/Opponent.iml" />
       <module fileurl="file://$PROJECT_DIR$/Player/Player.iml" filepath="$PROJECT_DIR$/Player/Player.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PointSystem/PointSystem.iml" filepath="$PROJECT_DIR$/PointSystem/PointSystem.iml" />
     </modules>
   </component>
 </project>

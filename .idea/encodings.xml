@@ -19,10 +19,20 @@
     <file url="file://$PROJECT_DIR$/CommonBackground/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CommonBullet/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CommonBullet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CommonPointSystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CommonPointSystem/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EnemyOld/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EnemyOld/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Opponent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Opponent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Player/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Player/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PointSystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PointSystem/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dk.benand.cbse.score/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dk.benand.cbse.score/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/new-module/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/new-module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

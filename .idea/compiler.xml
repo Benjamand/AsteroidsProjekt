@@ -9,18 +9,25 @@
         <module name="Bullet" />
         <module name="Player" />
         <module name="Background" />
-        <module name="Asteroids" />
         <module name="Collision" />
         <module name="CommonAsteroids" />
         <module name="CommonBackground" />
+        <module name="Enemy (2) (dk.sdu.mmmi.cbse)" />
+        <module name="PointSystem" />
         <module name="CommonBullet" />
         <module name="Common" />
+        <module name="Asteroids" />
+        <module name="Opponent" />
         <module name="Core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="astroids-components (1)" target="9" />
       <module name="CommonBackbround" target="9" />
+      <module name="CommonPointSystem" target="17" />
+      <module name="dk.benand.cbse.score" target="17" />
+      <module name="Enemy" target="17" />
+      <module name="Enemy (2) (dk.sdu.mmmi.cbse)" target="21" />
       <module name="new-module" target="9" />
     </bytecodeTargetLevel>
   </component>
@@ -34,9 +41,14 @@
       <module name="CommonAsteroids" options="-parameters" />
       <module name="CommonBackground" options="-parameters" />
       <module name="CommonBullet" options="-parameters" />
+      <module name="CommonPointSystem" options="-parameters" />
       <module name="Core" options="-parameters" />
+      <module name="Enemy" options="-parameters" />
+      <module name="Opponent" options="-parameters" />
       <module name="Player" options="-parameters" />
+      <module name="PointSystem" options="-parameters" />
       <module name="astroids-components" options="-parameters" />
+      <module name="dk.benand.cbse.score" options="-parameters" />
     </option>
   </component>
 </project>

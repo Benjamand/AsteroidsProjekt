@@ -33,28 +33,28 @@ public class ModuleConfig {
 
      @Bean
      public List<IGamePluginService> gamePluginServices() {
-          return ServiceLoader.load(IGamePluginService.class).stream()
+          return ServiceLoader.load(Main.layer, IGamePluginService.class).stream()
                   .map(ServiceLoader.Provider::get)
                   .collect(toList());
      }
 
      @Bean
      public List<IEntityProcessingService> entityProcessingServiceList() {
-          return ServiceLoader.load(IEntityProcessingService.class).stream()
+          return ServiceLoader.load(Main.layer, IEntityProcessingService.class).stream()
                   .map(ServiceLoader.Provider::get)
                   .collect(toList());
      }
 
      @Bean
      public List<IPostEntityProcessingService> postEntityProcessingServices() {
-          return ServiceLoader.load(IPostEntityProcessingService.class).stream()
+          return ServiceLoader.load(Main.layer, IPostEntityProcessingService.class).stream()
                   .map(ServiceLoader.Provider::get)
                   .collect(toList());
      }
 
      @Bean
      public List<BackgroundSPI> backgroundSpis() {
-          return ServiceLoader.load(BackgroundSPI.class).stream()
+          return ServiceLoader.load(Main.layer, BackgroundSPI.class).stream()
                   .map(ServiceLoader.Provider::get)
                   .collect(Collectors.toList());
      }
