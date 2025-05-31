@@ -1,9 +1,12 @@
 import dk.benand.cbse.common.services.IPostEntityProcessingService;
 
 module Collision {
-    requires Common;
+     uses dk.benand.cbse.common.asteroids.IAsteroidSplitter;
+     requires Common;
+     requires CommonAsteroids;
      requires spring.web;
-     exports dk.benand.cbse.collisionsystem;
+ requires spring.beans;
+ exports dk.benand.cbse.collisionsystem;
      provides IPostEntityProcessingService with dk.benand.cbse.collisionsystem.CollisionDetector;
      opens dk.benand.cbse.collisionsystem to spring.core, spring.beans, spring.context;
 }

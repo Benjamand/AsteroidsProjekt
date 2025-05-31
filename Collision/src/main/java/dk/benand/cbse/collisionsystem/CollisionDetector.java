@@ -1,20 +1,33 @@
 package dk.benand.cbse.collisionsystem;
 
+import dk.benand.cbse.common.asteroids.Asteroid;
+import dk.benand.cbse.common.asteroids.IAsteroidSplitter;
 import dk.benand.cbse.common.services.IPostEntityProcessingService;
 import dk.benand.cbse.common.data.Entity;
 import dk.benand.cbse.common.data.GameData;
 import dk.benand.cbse.common.data.World;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
+import java.util.ServiceLoader;
+import java.util.ArrayList;
+
 
 public class CollisionDetector implements IPostEntityProcessingService {
 
     private final RestTemplate restTemplate;
     private final String pointServiceUrl = "http://localhost:8080/score";
+    private IAsteroidSplitter asteroidSplitter;
 
     public CollisionDetector() {
         this.restTemplate = new RestTemplate();
+        ServiceLoader<IAsteroidSplitter> loader = ServiceLoader.load(IAsteroidSplitter.class);
+        loader.findFirst().ifPresent(s -> this.asteroidSplitter = s);
     }
+
+
     public void addPoints(Long points) {
         String url = pointServiceUrl + "?point=" + points;
         if (isApiAvailable(url)) {
@@ -28,17 +41,25 @@ public class CollisionDetector implements IPostEntityProcessingService {
 
     @Override
     public void process(GameData gameData, World world) {
-        // two for loops for all entities in the world
-        for (Entity entity1 : world.getEntities()) {
-            for (Entity entity2 : world.getEntities()) {
+        List<Entity> entities = new ArrayList<>(world.getEntities());
 
-                // if the two entities are identical, skip the iteration
-                if (entity1.getID().equals(entity2.getID())) {
-                    continue;
-                }
+        for (int i = 0; i < entities.size(); i++) {
+            Entity entity1 = entities.get(i);
+            for (int j = i + 1; j < entities.size(); j++) {
+                Entity entity2 = entities.get(j);
 
-                // CollisionDetection
-                if (this.collides(entity1, entity2)) {
+                if (collides(entity1, entity2)) {
+                    if (entity1 instanceof Asteroid && asteroidSplitter != null) {
+                        if (world.getEntities().contains(entity1)) {
+                            asteroidSplitter.createSplitAsteroid(entity1, world);
+                        }
+                    }
+                    if (entity2 instanceof Asteroid && asteroidSplitter != null) {
+                        if (world.getEntities().contains(entity2)) {
+                            asteroidSplitter.createSplitAsteroid(entity2, world);
+                        }
+                    }
+
                     world.removeEntity(entity1);
                     world.removeEntity(entity2);
                     addPoints(1L);

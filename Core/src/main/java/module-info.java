@@ -1,6 +1,6 @@
 module Core {
-    requires Common;
-    requires CommonBackground;
+     requires Common;
+     requires CommonBackground;
      requires spring.context;
      requires spring.core;
      requires spring.beans;

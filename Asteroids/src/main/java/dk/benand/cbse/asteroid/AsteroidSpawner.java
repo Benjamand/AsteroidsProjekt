@@ -55,7 +55,7 @@ public class AsteroidSpawner implements IEntityProcessingService {
           asteroid.setY(y);
           asteroid.setRadius(size);
           asteroid.setRotation(rnd.nextInt(360));
-          asteroid.setLifeAmount(rnd.nextInt(4) + 1);
+          asteroid.setLifeAmount(rnd.nextInt(2) + 1);
 
           world.addEntity(asteroid);
      }

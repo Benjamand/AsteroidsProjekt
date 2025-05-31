@@ -28,10 +28,11 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
         }
 
         for (int i = 0; i < 2; i++) {
+            Random rnd = new Random();
             Asteroid smallAsteroid = new Asteroid();
 
-            smallAsteroid.setX(parentAsteroid.getX());
-            smallAsteroid.setY(parentAsteroid.getY());
+            smallAsteroid.setX(parentAsteroid.getX() + rnd.nextInt(-10, 10));
+            smallAsteroid.setY(parentAsteroid.getY()  + rnd.nextInt(-10, 10));
 
             float newRadius = parentAsteroid.getRadius() * 0.6f;
             smallAsteroid.setRadius(newRadius);
@@ -43,7 +44,6 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
                     newRadius, newRadius
             );
 
-            Random rnd = new Random();
             float rotationOffset = rnd.nextInt(60) - 30;
             smallAsteroid.setRotation(parentAsteroid.getRotation() + rotationOffset);
 
